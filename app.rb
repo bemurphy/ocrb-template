@@ -1,7 +1,13 @@
-require "activesupport"
 require "sinatra"
 require "faker"
 require "ostruct"
+
+class Array
+  def extract_options!
+    last.is_a?(::Hash) ? pop : {}
+  end
+
+end
 
 class Person
   attr_accessor :name, :bio, :email, :github, :twitter, :website
