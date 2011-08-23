@@ -63,5 +63,6 @@ end
 get "/" do
   @people = []
   20.times { @people << Person.new }
+  @people = @people.sort_by { |person| person.name }
   erb :index
 end
