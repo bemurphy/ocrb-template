@@ -131,3 +131,7 @@ textarea.email-message  {
   opacity:.80;
   filter: alpha(opacity=80);
 }
+
+.person {
+  margin-bottom: 10px;
+}
