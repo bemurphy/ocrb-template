@@ -34,7 +34,7 @@ class Person
   end
 
   def init_twitter
-    self.twitter = Faker::Internet.user_name
+    self.twitter = name.downcase.gsub(" ", '.')
   end
 end
 
