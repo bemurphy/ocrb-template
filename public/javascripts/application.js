@@ -32,13 +32,13 @@ $(function(){
   $(".topbar .primary-nav li:nth-child(2)").click(function(e){
     e.preventDefault();
     activatePrimary(this);
-    $.scrollTo("#people", 500);
+    $.scrollTo("#people", 500, { offset : -50 });
   });
 
   $(".topbar .primary-nav li:nth-child(3)").click(function(e){
     e.preventDefault();
     activatePrimary(this);
-    $.scrollTo("#projects", 500);
+    $.scrollTo("#projects", 500, { offset : -50 } );
   });
 
   $("#contact_us").click(function(e){
