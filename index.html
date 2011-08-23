@@ -1,115 +1,158 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.0.0.min.css">
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.0.min.css">
     <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="javascripts/jquery.scrollTo-1.4.2-min.js" type="text/javascript" charset="utf-8"></script>
     <script src="application.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="content">
-        <div class="span8 columns">
-          <div class="alert-message success">
-            <a class="close" href="#">x</a>
-            <p>You've successfully logged in.</p>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        </div>
-        <div class="row">
-          <div class="span8 columns">
-            <div class="alert-message block-message error">
-              <a class="close" href="#">x</a>
-              <p><strong>Oh snap! You got an error!</strong> Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-              <p>
-                <a class="btn small" href="#">Submit</a>
-                <a class="btn small" href="#">Cancel</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="page-header">
-          <h1>This is some code</h1>
-        </div>
-        <div class="row">
-          <div class="columns span8">
-            <pre class="prettyprint linenums">
-def foobar
-  puts "I am foobar!"
-end
-</pre>
-          </div>
-        </div>
-
-        <div class="topbar-wrapper">
-          <div class="topbar">
-            <div class="fill">
-              <div class="container">
-                <h3>Project Name</h3>
-                <ul>
-                  <li class="active">Foo</li>
-                  <li>Bar</li>
-                  <li>Fizz</li>
-                  <li>Buzz</li>
-                </ul>
-                <ul class="nav secondary-nav">
-                  <li class="menu">Dropdown</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="page-header">
-          <h1>this is a page header <small>with a subheader</small></h1>
-        </div>
-        <div class="row-off">
-          <ul class="tabs" style="margin-bottom: 0;">
-            <li class="active"><a href="">Home</a></li>
-            <li><a href="">Profile</a></li>
-            <li><a href="">Messages</a></li>
-            <li><a href="">Settings</a></li>
-            <li><a href="">Contact</a></li>
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <h3><a href="#">OC Ruby</a></h3>
+          <ul class="primary-nav">
+            <li><a href="#" class="active">When &amp; Where</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a id="contact_us" href="#">Contact Us</a></li>
           </ul>
-          <p style="border: 1px solid #BFBFBF; border-top:none;padding: 10px;margin-top: 0;">Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        </div>
-        <div class="row">
-          <div class="well" style="padding: 14px 19px;">
-            <button type="submit" class="btn primary" href="#">Submit</button>
-            <button type="submit" class="btn" href="#">Cancel</button>
-          </div>
-        </div>
-        <div class="row" style="margin-bottom: 20px;">
-          <div class="span12 columns">
-            <p>For abbreviations and acronyms, use the abbr tag (acronym is deprecated in HTML5). Put the shorthand form within the tag and set a title for the complete name.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            <h4>Testimonials</h4>
-            <blockquote><p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></blockquote>
-            <small>Dr. Julian Bashir</small>
-          </div>
-        </div>
-        <div class="row">
-          <address>
-            <strong>Kajabi, LLC.</strong><br />
-            333 El Camino Real, Suite #2<br />
-            Tustin, CA 92612<br />
-            P: (123) 456-789
-          </address>
-        </div>
-        <div class="span12 columns">
-          <h4>What's inside</h4>
-          <p>When you take a closer look at Bootstrap, you will notice we have separated the development files into seven distinct files:</p>
-          <ul>
-            <li>Foo</li>
-            <li>Bar</li>
-            <li>Fizz</li>
-            <li>Buzz</li>
-            <li>Foobar!</li>
+
+          <form action="" method="post">
+            <input type="text" placeholder="Search" />
+          </form>
+
+          <ul class="nav secondary-nav">
+            <li class="menu">
+              <a href="#" class="menu">Account</a>
+              <ul class="menu-dropdown">
+                <li><a href="#">Secondary link</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Another link</a></li>
+              </ul>
+            </li>
           </ul>
+          
         </div>
       </div>
     </div>
+    <div id="masthead">
+      <div class="inner">
+        <div class="container">
+          <h1>OCRuby Brigade</h1>
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p><strong>Some strong:</strong> Some subheading Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam.</p>
+        </div> <!-- /container -->
+      </div>
+    </div>
+    <div id="first">
+      <div class="container">
+        <div class="row">
+          <div class="span5 columns">
+            <h6>Foo & Bar</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="span5 columns">
+            <h6>Fizz & Buzz</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="span5 columns">
+            <h6>The Meetup</h6>
+            <p>We organize our meetings and communicate with our members via meetup.com.  Join our group!</p>
+            <p class="center">
+              <a class="btn" href="http://www.meetup.com/ocruby">Meetup.com &rarr;</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="container">
+        <div id="when_and_where" class="page-header">
+          <h1>When &amp; Where <small>general information on our schedule</small></h1>
+        </div>
+        <div class="row">
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+
+        <div class="page-header">
+          <h1>People <small>members of our group</small></h1>
+        </div>
+        <div id="people" class="row">
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+
+        <div class="page-header">
+          <h1>Projects <small>things we've worked on</small></h1>
+        </div>
+        <div id="projects" class="row">
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+
+        <div class="well email-modal" style="background-color: #888; border: none; padding: 40px;">
+          <!-- Modal -->
+          <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1">
+            <div class="modal-header">
+              <h3>Email Us <small>we'd love to hear your thoughts and proposals</small></h3>
+              <a href="#" class="close">x</a>
+            </div>
+            <div class="modal-body">
+              <form class="form-stacked" action="" method="post">
+                <fieldset>
+                  <div class="clearfix">
+                    <label for="">Name</label>
+                    <div class="input">
+                      <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+                    </div>
+                  </div> <!-- /clearfix -->
+                  <div class="clearfix">
+                    <label for="">Email</label>
+                    <div class="input">
+                      <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+                    </div>
+                  </div> <!-- /clearfix -->
+                  <div class="clearfix">
+                    <label for="">Subject</label>
+                    <div class="input">
+                      <input class="xlarge" id="xlInput" name="xlInput" size="30" type="text">
+                    </div>
+                  </div> <!-- /clearfix -->
+                  <div class="clearfix">
+                    <label for="">Message</label>
+                    <div class="input">
+                      <textarea class="email-message"></textarea>
+                    </div>
+                  </div> <!-- /clearfix -->
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn primary">Send</a>
+              <a href="#" class="btn secondary">Cancel</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div id="fade" class="black_overlay"></div>
   </body>
 </html>
