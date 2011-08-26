@@ -1,7 +1,5 @@
 require "sinatra"
 require "faker"
-require "ostruct"
-# require 'dalli'
 
 class Array
   def extract_options!
@@ -56,9 +54,6 @@ helpers do
     end
   end
 end
-
-# ENV["MEMCACHE_SERVERS"] ||= "localhost:11211"
-# set :cache, Dalli::Client.new
 
 get "/" do
   @people = []
